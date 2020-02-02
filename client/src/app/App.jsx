@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { useTranslation } from 'react-i18next';
 import {
     BrowserRouter as Router,
     Switch,
@@ -48,8 +49,10 @@ const App = () => {
 };
 
 const Home = () => {
+    const { t } = useTranslation();
+
     return (
-        <h2>Home</h2>
+        <h2>{t('universal:welcome_text')}</h2>
     )
 };
 
