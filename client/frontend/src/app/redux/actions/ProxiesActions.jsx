@@ -6,13 +6,7 @@ import {
     PROXIES_UPDATE,
     PROXIES_IMPORT
 } from '../types';
-import {
-    ROUTE_PROXIES_CREATE,
-    ROUTE_PROXIES_LIST,
-    ROUTE_PROXIES_DELETE,
-    ROUTE_PROXIES_UPDATE,
-    ROUTE_PROXIES_IMPORT,
-} from '../../../routes';
+import Routes from './../../../../../../server/routes';
 
 /**
  * Сохраняет новый прокси
@@ -20,7 +14,7 @@ import {
  * @returns {function(...[*]=)}
  */
 export const proxyCreate = proxy => async dispatch => {
-    const newProxy = await send(ROUTE_PROXIES_CREATE, proxy);
+    const newProxy = await send(Routes.ROUTE_PROXIES_CREATE, proxy);
 
     dispatch({
         type: PROXIES_CREATE,
@@ -35,7 +29,7 @@ export const proxyCreate = proxy => async dispatch => {
  * @returns {function(...[*]=)}
  */
 export const proxyList = () => async dispatch => {
-    const list = await send(ROUTE_PROXIES_LIST);
+    const list = await send(Routes.ROUTE_PROXIES_LIST);
     console.log(list);
 
     dispatch({
@@ -53,7 +47,7 @@ export const proxyList = () => async dispatch => {
  */
 export const proxyDelete = ids => async dispatch => {
     // не ждем
-    send(ROUTE_PROXIES_DELETE, { ids });
+    send(Routes.ROUTE_PROXIES_DELETE, { ids });
 
     dispatch({
         type: PROXIES_DELETE,
@@ -70,7 +64,7 @@ export const proxyDelete = ids => async dispatch => {
  */
 export const proxyUpdate = proxy => async dispatch => {
     // не ждем
-    send(ROUTE_PROXIES_UPDATE, { proxy });
+    send(Routes.ROUTE_PROXIES_UPDATE, { proxy });
 
     dispatch({
         type: PROXIES_UPDATE,
@@ -87,7 +81,7 @@ export const proxyUpdate = proxy => async dispatch => {
  * @returns {function(...[*]=)}
  */
 export const proxyImport = proxiesList => async dispatch => {
-    send(ROUTE_PROXIES_IMPORT, { proxiesList });
+    send(Routes.ROUTE_PROXIES_IMPORT, { proxiesList });
 
     dispatch({
         type: PROXIES_IMPORT,
