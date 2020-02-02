@@ -1,4 +1,4 @@
-import { send } from './../../../clientIpc';
+import { send } from '../../../clientIpc';
 import {
     PROXIES_CREATE,
     PROXIES_LIST,
@@ -6,7 +6,7 @@ import {
     PROXIES_UPDATE,
     PROXIES_IMPORT
 } from '../types';
-import Routes from './../../../../../../server/routes';
+import Routes from '../../../../../server/routes';
 
 /**
  * Сохраняет новый прокси

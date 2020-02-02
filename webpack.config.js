@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './client/frontend/src/index.jsx',
+  entry: './client/src/index.jsx',
   module: {
     rules: [
       {
@@ -35,7 +35,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebPackPlugin({
-      template: "./client/frontend/public/index.html",
+      template: "./client/public/index.html",
       filename: "./index.html"
     }),
   ],

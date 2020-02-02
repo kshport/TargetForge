@@ -6,7 +6,7 @@ import ProxiesRoot from '../Components/Proxies/ProxiesRoot';
 import {
     proxyCreate,
     proxyList,
-} from './../redux/actions'
+} from '../redux/actions'
 
 class Proxies extends Component {
     render() {

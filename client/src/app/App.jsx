@@ -54,13 +54,3 @@ const Home = () => {
 };
 
 export default App;
-
-// ipc example
-/*
-import { send } from '../clientIpc';
-<a onClick={
-    async () => {
-        const result = await send('test');
-        console.log(result);
-    }
-}>Test Me!</a>*/
