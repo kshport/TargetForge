@@ -2,15 +2,17 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import ProxiesRoot from '../Components/Proxies/ProxiesRoot';
 import {
-    exampleAction,
+    proxyCreate,
+    proxyList,
 } from './../redux/actions'
-import ProxiesList from '../Components/Proxies/ProxiesList'
 
 class Proxies extends Component {
     render() {
-        return <ProxiesList
-            handleOnClick={this.props.exampleAction.bind(this)}
+        return <ProxiesRoot
+            handleOnClickCreate={this.props.proxyCreate.bind(this)}
+            handleOnClickGetList={this.props.proxyList.bind(this)}
         />;
     }
 }
@@ -23,7 +25,8 @@ const mapStateToProps = ({ proxies }) => {
 
 const mapDispatchToProps = dispatch => {
     return bindActionCreators({
-        exampleAction,
+        proxyCreate,
+        proxyList,
     }, dispatch);
 };
 

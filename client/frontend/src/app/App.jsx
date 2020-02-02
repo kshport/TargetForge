@@ -1,4 +1,8 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import ListGroup from 'react-bootstrap/ListGroup';
 import {
     BrowserRouter as Router,
     Switch,
@@ -11,30 +15,34 @@ import Proxies from './Containers/Proxies';
 const App = () => {
     return (
         <Router>
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to="/" activeClassName="hurray">
-                            Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/proxies" activeClassName="hurray">
-                            Proxies
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
-            <div>
-                <Switch>
-                    <Route path='/proxies'>
-                        <Proxies />
-                    </Route>
-                    <Route path='/'>
-                        <Home />
-                    </Route>
-                </Switch>
-            </div>
+            <Container fluid>
+                <Row>
+                    <Col xs={4}>
+                        <ListGroup variant="flush">
+                            <ListGroup.Item>
+                                <NavLink to="/" activeClassName="hurray">
+                                    Home
+                                </NavLink>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <NavLink to="/proxies" activeClassName="hurray">
+                                    Proxies
+                                </NavLink>
+                            </ListGroup.Item>
+                        </ListGroup>
+                    </Col>
+                    <Col>
+                        <Switch>
+                            <Route path='/proxies'>
+                                <Proxies />
+                            </Route>
+                            <Route path='/'>
+                                <Home />
+                            </Route>
+                        </Switch>
+                    </Col>
+                </Row>
+            </Container>
         </Router>
     )
 };

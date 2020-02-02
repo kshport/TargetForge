@@ -1,10 +1,17 @@
 import React from 'react'
 
-const ProxiesList = ({ handleOnClick }) => {
+const ProxiesList = ({ handleOnClickCreate, handleOnClickGetList }) => {
     return (
         <div>
             <h2>Proxies List</h2>
-            <a onClick={() => handleOnClick()}>Click Me!</a>
+            <a onClick={() => handleOnClickCreate({
+                ip: '192.168.1.1',
+                port: 8888,
+                login: 'login',
+                password: 'password'
+            })}>Click Me!</a>
+            <br />
+            <a onClick={() => handleOnClickGetList()}>Get list!</a>
         </div>
     )
 };
