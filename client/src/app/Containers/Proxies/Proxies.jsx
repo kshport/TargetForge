@@ -2,18 +2,24 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import ProxiesRoot from '../Components/Proxies/ProxiesRoot';
+import ProxiesRoot from '../../Components/Proxies/ProxiesRoot';
 import {
     proxyCreate,
     proxyList,
-} from '../redux/actions'
+} from '../../redux/actions'
 
 class Proxies extends Component {
+    componentDidMount() {
+        console.log('componentDidMount');
+        this.props.proxyList();
+    }
+
+    componentWillUnmount() {
+        console.log('componentWillUnmount');
+    }
+
     render() {
-        return <ProxiesRoot
-            handleOnClickCreate={this.props.proxyCreate.bind(this)}
-            handleOnClickGetList={this.props.proxyList.bind(this)}
-        />;
+        return <ProxiesRoot proxiesList={ this.props.list } />;
     }
 }
 

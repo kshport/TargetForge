@@ -11,7 +11,9 @@ import {
     NavLink,
 } from "react-router-dom";
 import './App.css';
-import Proxies from './Containers/Proxies';
+import Proxies from './Containers/Proxies/Proxies';
+import ProxiesCreate from './Containers/Proxies/ProxiesCreate';
+import Dashboard from './Containers/Dashboard/Dashboard';
 
 const App = () => {
     return (
@@ -34,11 +36,14 @@ const App = () => {
                     </Col>
                     <Col>
                         <Switch>
+                            <Route path='/proxies/create'>
+                                <ProxiesCreate />
+                            </Route>
                             <Route path='/proxies'>
                                 <Proxies />
                             </Route>
                             <Route path='/'>
-                                <Home />
+                                <Dashboard />
                             </Route>
                         </Switch>
                     </Col>

@@ -1,0 +1,15 @@
+{
+  "page_list_title": "Прокси",
+  "page_list_add_button_label": "Добавить",
+  "page_add_title": "Добавить прокси",
+  "page_edit_title": "Изменить прокси",
+  "page_add_form_ip_label": "IP*:",
+  "page_add_form_ip_placeholder": "Введите ip адрес:",
+  "page_add_form_port_label": "Порт*:",
+  "page_add_form_port_placeholder": "Введите порт",
+  "page_add_form_login_label": "Логин:",
+  "page_add_form_login_placeholder": "Введите логин",
+  "page_add_form_password_label": "Пароль:",
+  "page_add_form_password_placeholder": "Введите пароль",
+  "page_add_form_type_label": "Укажите тип*:"
+}

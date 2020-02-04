@@ -1,3 +1,6 @@
 {
-  "welcome_text": "Добро пожаловать в React!"
+  "welcome_text": "Добро пожаловать в React!",
+  "store": "Добавить",
+  "update": "Сохранить",
+  "cancel": "Отмена"
 }

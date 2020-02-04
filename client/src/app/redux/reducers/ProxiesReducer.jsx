@@ -1,5 +1,5 @@
 import {
-    PROXIES_EXAMPLE,
+    PROXIES_LIST,
 } from '../types';
 
 const INITIAL_STATE = {
@@ -9,9 +9,11 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
     console.log(action);
     switch (action.type) {
-        case PROXIES_EXAMPLE:
-            console.log(PROXIES_EXAMPLE);
-            return state;
+        case PROXIES_LIST:
+            return {
+                ...state,
+                list: action.payload.list
+            };
         default:
             return state;
     }
