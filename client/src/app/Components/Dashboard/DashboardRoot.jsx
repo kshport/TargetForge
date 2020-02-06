@@ -1,12 +1,8 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
 
-const ProxiesRoot = ({ proxiesList }) => {
+const DashboardRoot = () => {
     const { t } = useTranslation();
 
     return (
@@ -15,10 +11,10 @@ const ProxiesRoot = ({ proxiesList }) => {
                 {t('dashboard:page_title')}
             </Card.Header>
             <Card.Body>
-
+                Тут будут виджеты
             </Card.Body>
         </Card>
     )
 };
 
-export default ProxiesRoot;
+export default DashboardRoot;
